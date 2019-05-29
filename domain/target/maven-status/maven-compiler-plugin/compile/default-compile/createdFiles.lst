@@ -1,0 +1,6 @@
+taller/systems/com/example/springbootbias/domain/WikiPage.class
+taller/systems/com/example/springbootbias/api/BiasService.class
+taller/systems/com/example/springbootbias/domain/BiasObject.class
+taller/systems/com/example/springbootbias/spi/BiasRepository.class
+taller/systems/com/example/springbootbias/api/BiasServiceImpl.class
+taller/systems/com/example/springbootbias/domain/WikiPageSource.class

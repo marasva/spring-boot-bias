@@ -22,10 +22,15 @@ public interface BiasController {
     @PostMapping("/wikiPage")
     ResponseEntity<Void> createWikiPage(@RequestBody WikiPage wikiPage);
 
+    // Think I have to change the request method to RequestParam
+    @GetMapping("/wikiPage/{pageName}/{data}")
+    ResponseEntity createWikiPage1(@PathVariable String pageName,@PathVariable String data);
+
+
     @DeleteMapping("/wikiPage")
     ResponseEntity<Void> deleteWikiPage(@PathVariable String wikiPageId);
 
-    @GetMapping("/wikiPage/{productId}")
+    @GetMapping("/wikiPage/{wikiPageId}")
     ResponseEntity<WikiPage> findWikiPageById(@PathVariable String wikiPageId);
 
 }

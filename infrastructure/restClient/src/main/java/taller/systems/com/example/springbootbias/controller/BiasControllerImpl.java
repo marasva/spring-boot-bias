@@ -1,6 +1,8 @@
 package taller.systems.com.example.springbootbias.controller;
 
+import ch.qos.logback.core.CoreConstants;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
@@ -34,6 +36,16 @@ public class BiasControllerImpl implements BiasController{
     public ResponseEntity<Void> createWikiPage(WikiPage wikiPage) {
         biasService.createWikiPage(wikiPage);
         return new ResponseEntity<Void>(HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<WikiPage> createWikiPage1(String pageName,String data) {
+        WikiPage wikiPage = new WikiPage(pageName,data);
+        biasService.createWikiPage(wikiPage);
+        System.out.println(biasService.getAllWikiPages());
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Responded","BiasController");
+        return ResponseEntity.accepted().headers(headers).body(wikiPage);
     }
 
     @Override

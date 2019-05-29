@@ -16,9 +16,9 @@ public class WikiPage {
     private String pageName;
 
     @Lob
-    private byte[] data;
+    private String data;
 
-    public WikiPage(String pageName, byte[] data) {
+    public WikiPage(String pageName, String data) {
         this.pageName = pageName;
         this.data = data;
     }
@@ -39,11 +39,11 @@ public class WikiPage {
         this.pageName = pageName;
     }
 
-    public byte[] getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(byte[] data) {
+    public void setData(String data) {
         this.data = data;
     }
 
