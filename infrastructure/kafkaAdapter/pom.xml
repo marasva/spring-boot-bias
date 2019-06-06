@@ -10,14 +10,5 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
     <artifactId>kafkaAdapter</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>taller.systems.com.example</groupId>
-            <artifactId>domain</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
-
 
 </project>
